@@ -26,7 +26,7 @@ The YouTube to Blog Generator is a web application that allows users to convert 
 - **Multi-Page Application**: Includes dedicated pages for login, blog management, and user dashboard.
 - **Persistent Storage**: Blogs are stored in a PostgreSQL database, allowing users to access their content anytime.
 
-## Technologise used
+## Technologies used
 
 - **Backend**: Django
 - **Frontend**: HTML, Tailwind CSS, js
