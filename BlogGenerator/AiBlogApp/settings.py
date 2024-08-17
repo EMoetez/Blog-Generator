@@ -82,8 +82,8 @@ DATABASES = {
         'NAME': 'Blog_Database',  # Replace with your database name
         'USER': 'postgres',  # Replace with your database user
         'PASSWORD': "YourPostgresDB_Password" ,  # Replace with your database password
-        'HOST': 'localhost',  # or the hostname of your PostgreSQL server
-        'PORT': '5432',  # or the port your PostgreSQL server is running on
+        'HOST': 'HOSTNAME',  # or the hostname of your PostgreSQL server
+        'PORT': 'ENTER_PORT',  # or the port your PostgreSQL server is running on
     }
 }
 
