@@ -8,10 +8,9 @@
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Database Schema](#database-schema)
-7. [API Endpoints](#api-endpoints)
-8. [Troubleshooting](#troubleshooting)
-9. [Contribution](#contribution)
-10. [License](#license)
+7. [Troubleshooting](#troubleshooting)
+8. [Contribution](#contribution)
+9. [License](#license)
 
 
 ## Project Overview
@@ -52,7 +51,7 @@ The YouTube to Blog Generator is a web application that allows users to convert 
 1. **Clone the Repository**:
 
    ```bash
-   git clone [https://github.com/EMoetez/Blog-Generator.git](https://github.com/EMoetez/Blog-Generator.git)
+   git clone https://github.com/EMoetez/Blog-Generator.git
    cd youtube-to-blog
 
 2. **Create a Virtual Environment:**
@@ -77,16 +76,18 @@ The YouTube to Blog Generator is a web application that allows users to convert 
    ```
 
 6. **Start the Development Server:**
-  ```python
-     python manage.py runserver
+   ```python
+   python manage.py runserver
    ```
 
 
 7. **Access the Application:**
-  -**Open your browser and go to http://127.0.0.1:8000/.** 
+   
+-**Open your browser and go to http://127.0.0.1:8000/.** 
 
 
 ## Usage
+
 1. **Register or Log In:** Create an account or log in using your credentials.
 2. **Input YouTube URL:** Enter the YouTube video URL you want to convert into a blog.
 3. **Generate Blog:** Click the "Generate Blog" button to start the process.
@@ -102,6 +103,7 @@ The project uses a PostgreSQL database with the following schema:
     - username: String
     - email: String
     - password: String (Hashed)
+      
  - **Blogs:**
 
     - user: string (Primary Key)
@@ -110,11 +112,6 @@ The project uses a PostgreSQL database with the following schema:
     - generated_content: Text
     - created_at: DateTime
     
-## API Endpoints
-
-- /api/generate-blog/: POST - Generate a blog from a YouTube URL
-- /api/blogs/: GET - Retrieve all blogs for a user
-- /api/blogs/<id>/: GET, PUT, DELETE - Retrieve, update, or delete a specific blog
 
 ## Troubleshooting
 
