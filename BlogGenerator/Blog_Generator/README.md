@@ -4,7 +4,7 @@
 
 1. [Project Overview](#project-overview)
 2. [Features](#features)
-3. [Technology Stack](#technology-stack)
+3. [Technologies used](#technologyies-used)
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Database Schema](#database-schema)
@@ -26,7 +26,7 @@ The YouTube to Blog Generator is a web application that allows users to convert 
 - **Multi-Page Application**: Includes dedicated pages for login, blog management, and user dashboard.
 - **Persistent Storage**: Blogs are stored in a PostgreSQL database, allowing users to access their content anytime.
 
-## Technology Stack
+## Technologise used
 
 - **Backend**: Django
 - **Frontend**: HTML, Tailwind CSS, js
@@ -52,7 +52,7 @@ The YouTube to Blog Generator is a web application that allows users to convert 
 
    ```bash
    git clone https://github.com/EMoetez/Blog-Generator.git
-   cd youtube-to-blog
+   cd Blog-Generator
 
 2. **Create a Virtual Environment:**
    ```bash
@@ -67,8 +67,9 @@ The YouTube to Blog Generator is a web application that allows users to convert 
 
     - **Create a .env file in the root directory.**
     - **Add your API keys and database configuration:**
-       - ASSEMBLY_AI_API_KEY=your_assembly_ai_api_key
-       - DATABASE_Password=YourDBPassword
+      
+         - ASSEMBLY_AI_API_KEY=your_assembly_ai_api_key
+         - DATABASE_Password=YourDBPassword
 
 5. **Run Migrations:**
    ```python
