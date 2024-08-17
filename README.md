@@ -4,7 +4,7 @@
 
 1. [Project Overview](#project-overview)
 2. [Features](#features)
-3. [Technologies used](#technologyies-used)
+3. [Technologies used](#technologies-used)
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Database Schema](#database-schema)
