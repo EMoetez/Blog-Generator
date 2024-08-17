@@ -45,14 +45,14 @@ The YouTube to Blog Generator is a web application that allows users to convert 
 - Virtualenv
 - Django
 - Assembly AI API Key
-- Ollama API Key (for LLaMA 2 or any model of your choice)
+- Ollama API (for LLaMA 2 or any model of your choice)
 
 ### Steps
 
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/youtube-to-blog.git
+   git clone [https://github.com/EMoetez/Blog-Generator.git](https://github.com/EMoetez/Blog-Generator.git)
    cd youtube-to-blog
 
 2. **Create a Virtual Environment:**
@@ -76,13 +76,13 @@ The YouTube to Blog Generator is a web application that allows users to convert 
    python manage.py migrate
    ```
 
-6: **Start the Development Server:**
+6. **Start the Development Server:**
   ```python
      python manage.py runserver
    ```
 
 
-7: **Access the Application:**
+7. **Access the Application:**
   -**Open your browser and go to http://127.0.0.1:8000/.** 
 
 
@@ -96,34 +96,39 @@ The YouTube to Blog Generator is a web application that allows users to convert 
 ## Database Schema
 The project uses a PostgreSQL database with the following schema:
 
-- **Users:**
+ - **Users:**
 
-    id: Integer (Primary Key)
-    username: String
-    email: String
-    password: String (Hashed)
-- **Blogs:**
+    - id: Integer (Primary Key)
+    - username: String
+    - email: String
+    - password: String (Hashed)
+ - **Blogs:**
 
-    id: Integer (Primary Key)
-    title: String
-    content: Text
-    author: Foreign Key (User)
-    created_at: DateTime
-    updated_at: DateTime
+    - user: string (Primary Key)
+    - youtube_title: String
+    - youtube_link: String
+    - generated_content: Text
+    - created_at: DateTime
+    
 ## API Endpoints
-    /api/generate-blog/: POST - Generate a blog from a YouTube URL
-    /api/blogs/: GET - Retrieve all blogs for a user
-    /api/blogs/<id>/: GET, PUT, DELETE - Retrieve, update, or delete a specific blog
+
+- /api/generate-blog/: POST - Generate a blog from a YouTube URL
+- /api/blogs/: GET - Retrieve all blogs for a user
+- /api/blogs/<id>/: GET, PUT, DELETE - Retrieve, update, or delete a specific blog
 
 ## Troubleshooting
-    Database Connection Errors: Ensure PostgreSQL is running and the DATABASE_URL is correctly configured in your .env file.
-    API Errors: Check if your API keys for Assembly AI and Ollama are correctly set up and have sufficient quota.
-    Static Files Not Loading: Ensure you’ve run collectstatic in production.
-##Contribution
-    Contributions are welcome! If you have suggestions or improvements, please fork the repository, create a feature branch, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-##License
-    This project is licensed under the MIT License. See the LICENSE file for more details.
+- Database Connection Errors: Ensure PostgreSQL is running and the DATABASE_URL is correctly configured in your .env file.
+- API Errors: Check if your API keys for Assembly AI and Ollama are correctly set up and have sufficient quota.
+- Static Files Not Loading: Ensure you’ve run collectstatic in production.
+  
+## Contribution
+
+Contributions are welcome! If you have suggestions or improvements, please fork the repository, create a feature branch, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 
 
