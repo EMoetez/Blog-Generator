@@ -93,11 +93,11 @@ def get_transcription(link,title):
 
     print(f"Text saved to {file_name}")
     return transcript.text
-################################################# 
-# The code below dosn't work because we don't have access to OpenAI API. For that, we will use Llama2 from huggingFace
+
+# Generate blog from transcript using Llama2 from Ollama API(you can use any model of your choice)
 def generate_blog_from_transcription(transcription):
     
-    prompt=f"Based on the following transcript from a YouTube video, write a comprehensive blog article, write it based on the transcript, but dont make it look like a youtube video,please do it in less 200 words approximately, make it look like a proper blog article:\n\n{transcription}\n\nArticle:"
+    prompt=f"Based on the following transcript from a YouTube video, write a comprehensive blog article, write it based on the transcript, but dont make it look like a youtube video, please do it in 200 words approximately, make it look like a proper blog article:\n\n{transcription}\n\nArticle:"
     Answer=ollama.chat(
     
     model="llama2",
@@ -106,13 +106,15 @@ def generate_blog_from_transcription(transcription):
     stream=False,
 )
 
-    
-    print(Answer['message']['content'],end='',flush=True)
+    ##For dubbuging
+    #print(Answer['message']['content'],end='',flush=True)
     
     
     generated_content = Answer['message']['content']
+    
     return generated_content  
-#################################################
+
+
 def blog_list(request):
      blog_articles= Blogpost.objects.filter(user= request.user)
      return render(request, "All-blogs.html", {'blog_articles':blog_articles})
